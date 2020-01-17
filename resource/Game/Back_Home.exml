@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<e:Skin class="Back_HomeSkin" states="up,down,disabled" minHeight="50" minWidth="100" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Button label="返回" left="0" right="0" top="0" bottom="0"/>
+
+	<w:Config id="16fb133f9d7" ></w:Config>
+</e:Skin>

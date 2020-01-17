@@ -13,6 +13,10 @@
 		"bin-debug/Main.js",
 		"bin-debug/Platform.js",
 		"bin-debug/ThemeAdapter.js",
-		"bin-debug/game/Reversi.js"
+		"bin-debug/game/attribute.js",
+		"bin-debug/game/Back_Home.js",
+		"bin-debug/game/Data.js",
+		"bin-debug/game/Reversi.js",
+		"bin-debug/game/StartGame.js"
 	]
 }

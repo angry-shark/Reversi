@@ -100,8 +100,8 @@ class Main extends eui.UILayer {
      * Create scene interface
      */
     protected createGameScene(): void {
-        console.log(typeof this._color);
-        this.addChild(new Reversi())
+        // this.addChild(StartGame.Shared())
+        this.addChild(StartGame.Shared())
     }
     /**
      * 根据name关键字创建一个Bitmap对象。name属性请参考resources/resource.json配置文件的内容。

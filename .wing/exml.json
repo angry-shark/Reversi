@@ -1,0 +1,12 @@
+{
+    "16fad63e2eb": {
+        "path": "game\\StartGame.ts",
+        "class": "StartGame",
+        "parentPath": ""
+    },
+    "16fb133f9d7": {
+        "path": "game\\Back_Home.ts",
+        "class": "Back_Home",
+        "parentPath": "resource/eui_skins/ButtonSkin.exml"
+    }
+}

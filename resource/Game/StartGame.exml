@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="StartGameSkin" width="640" height="1136" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" >
+	<w:Config id="16fad63e2eb" ></w:Config>
+	<e:Rect left="0" right="0" top="0" bottom="0"/>
+	<e:Label text="黑白方块" bold="true" size="60" y="268.18" horizontalCenter="0" fontFamily="Microsoft YaHei"/>
+	<e:Button id="btn_startgame" label="" y="627.7" anchorOffsetX="0" width="207.57" anchorOffsetY="0" height="86.37" horizontalCenter="0">
+		<e:skinName>
+			<e:Skin states="up,down,disabled">
+			<e:Image width="100%" height="100%" source="border_png"/>
+			<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+			</e:Skin>
+		</e:skinName>
+	</e:Button>
+	<e:Label text="开始游戏" y="655.89" horizontalCenter="0" bold="true" textColor="0x070707" touchEnabled="false"/>
+</e:Skin>
