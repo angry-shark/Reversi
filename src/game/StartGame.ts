@@ -31,7 +31,7 @@ class StartGame extends eui.Component implements  eui.UIComponent {
 		this.btn_startgame.addEventListener(egret.TouchEvent.TOUCH_TAP,this.startGame,this);
 	}
 	private startGame(){
-		this.parent.addChild(Reversi.Shared());
+		this.parent.addChild(levelNormal.Shared());
 		this.parent.removeChild(this);
 	}
 }

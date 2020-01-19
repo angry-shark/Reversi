@@ -31,7 +31,7 @@ var StartGame = (function (_super) {
         this.btn_startgame.addEventListener(egret.TouchEvent.TOUCH_TAP, this.startGame, this);
     };
     StartGame.prototype.startGame = function () {
-        this.parent.addChild(Reversi.Shared());
+        this.parent.addChild(levelNormal.Shared());
         this.parent.removeChild(this);
     };
     return StartGame;

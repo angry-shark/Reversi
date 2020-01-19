@@ -10,16 +10,18 @@ var Data = (function () {
         }
         return Data._width;
     };
-    Data.get_height = function () {
-        if (Data._height == 0) {
-            Data._height = 1336;
-        }
-        return Data._height;
+    //声明总行数
+    Data._row = function () {
+        var result = Math.ceil(1336 / (Data.get_width() / Data.rowNumber));
+        return result;
     };
     //声明一个点击成功的函数
-    //声明盒子的宽和高
+    //声明盒子的宽
     Data._width = 0;
-    Data._height = 0;
+    //声明盒子的高
+    Data._height = 1336;
+    //声明每一行的个数
+    Data.rowNumber = 4;
     return Data;
 }());
 __reflect(Data.prototype, "Data");
