@@ -22,16 +22,18 @@ var blockGroup = (function (_super) {
         var _this = _super.call(this) || this;
         //点击事件
         _this._curren = 0;
+        //随机黑色
+        _this.randomNumber = 0;
         _this.row();
         return _this;
     }
     blockGroup.prototype.row = function () {
         //初始化行
-        blockGroup.row = [];
+        this._rows = [];
         //创建一排
         for (var i = 0; i < Data.rowNumber; i++) {
             var blocks = new block();
-            blockGroup.row.push(blocks);
+            this._rows.push(blocks);
             blocks.x = i * blocks.width;
             this.addChild(blocks);
             blocks.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onclicktap, this);
@@ -46,19 +48,18 @@ var blockGroup = (function (_super) {
             this.dispatchEventWith('clickRight');
         }
     };
-    //随机黑色
     blockGroup.prototype.drawRow = function () {
-        var radomNumber = Math.ceil(Math.random() * 4) - 1;
         this.clear();
-        if (radomNumber == -1) {
-            radomNumber = 0;
+        this.randomNumber = Math.ceil(Math.random() * 4) - 1;
+        if (this.randomNumber == -1) {
+            this.randomNumber = 0;
         }
-        blockGroup.row[radomNumber].blockColor = 0;
+        this._rows[this.randomNumber].blockColor = 0;
     };
     //点击清空颜色
     blockGroup.prototype.clear = function () {
-        for (var i = 0; i < blockGroup.row.length; i++) {
-            blockGroup.row[i].blockColor = 1;
+        for (var i = 0; i < this._rows.length; i++) {
+            this._rows[i].blockColor = 1;
         }
     };
     blockGroup.prototype.move = function () {
@@ -67,10 +68,8 @@ var blockGroup = (function (_super) {
             this._curren = 0;
             this.drawRow();
         }
-        this.y = this._curren * Data.get_width();
+        this.y = this._curren * Data.get_width() / 4;
     };
-    //一排的数组
-    blockGroup.row = [];
     return blockGroup;
 }(egret.Sprite));
 __reflect(blockGroup.prototype, "blockGroup");

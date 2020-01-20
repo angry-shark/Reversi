@@ -27,11 +27,10 @@ class StartGame extends eui.Component implements  eui.UIComponent {
 		this.init();
 	}
 	private init(){
-		console.log('startgame。init')
 		this.btn_startgame.addEventListener(egret.TouchEvent.TOUCH_TAP,this.startGame,this);
 	}
 	private startGame(){
-		this.parent.addChild(levelNormal.Shared());
+		this.parent.addChild(new levelNormal());
 		this.parent.removeChild(this);
 	}
 }

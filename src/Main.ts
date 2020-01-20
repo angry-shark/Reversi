@@ -29,10 +29,10 @@
 
 class Main extends eui.UILayer {
 
-
+    public static Stage: egret.Stage = null;
     protected createChildren(): void {
         super.createChildren();
-
+        Main.Stage = this.stage;
         egret.lifecycle.addLifecycleListener((context) => {
             // custom lifecycle plugin
         })
@@ -67,7 +67,7 @@ class Main extends eui.UILayer {
         console.log(userInfo);
 
     }
-
+    
     private async loadResource() {
         try {
             const loadingView = new LoadingUI();

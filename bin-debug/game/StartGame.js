@@ -27,11 +27,10 @@ var StartGame = (function (_super) {
         this.init();
     };
     StartGame.prototype.init = function () {
-        console.log('startgame。init');
         this.btn_startgame.addEventListener(egret.TouchEvent.TOUCH_TAP, this.startGame, this);
     };
     StartGame.prototype.startGame = function () {
-        this.parent.addChild(levelNormal.Shared());
+        this.parent.addChild(new levelNormal());
         this.parent.removeChild(this);
     };
     return StartGame;

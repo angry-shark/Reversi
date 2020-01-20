@@ -23,7 +23,6 @@ class Back_Home extends eui.Button implements  eui.UIComponent {
 		this.init()
 	}
 	private init(){
-		console.log(this.parent.parent.width);
 		this.x=this.parent.parent.width-100;
 		this.addEventListener(egret.TouchEvent.TOUCH_TAP,this.backhome,this);
 	}

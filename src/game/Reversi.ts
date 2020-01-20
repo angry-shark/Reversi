@@ -18,7 +18,7 @@ class Reversi extends egret.Sprite{
 		this.init();
 	}
 	private init(){
-		this.addChild(Back_Home.Shared())
+		// this.addChild(Back_Home.Shared())
 		this.touchEnabled=true;
 		this.draw()
 	}

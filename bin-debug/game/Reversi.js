@@ -26,7 +26,7 @@ var Reversi = (function (_super) {
         return Reversi.shared;
     };
     Reversi.prototype.init = function () {
-        this.addChild(Back_Home.Shared());
+        // this.addChild(Back_Home.Shared())
         this.touchEnabled = true;
         this.draw();
     };

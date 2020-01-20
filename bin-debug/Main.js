@@ -80,6 +80,7 @@ var Main = (function (_super) {
     }
     Main.prototype.createChildren = function () {
         _super.prototype.createChildren.call(this);
+        Main.Stage = this.stage;
         egret.lifecycle.addLifecycleListener(function (context) {
             // custom lifecycle plugin
         });
@@ -219,6 +220,7 @@ var Main = (function (_super) {
         panel.verticalCenter = 0;
         this.addChild(panel);
     };
+    Main.Stage = null;
     return Main;
 }(eui.UILayer));
 __reflect(Main.prototype, "Main");

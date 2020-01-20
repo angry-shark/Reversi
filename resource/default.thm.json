@@ -14,7 +14,8 @@
 		"eui.VSlider": "resource/eui_skins/VSliderSkin.exml",
 		"eui.ItemRenderer": "resource/eui_skins/ItemRendererSkin.exml",
 		"StartGame": "resource/Game/StartGame.exml",
-		"Back_Home": "resource/Game/Back_Home.exml"
+		"Back_Home": "resource/Game/Back_Home.exml",
+		"gameOverPanel": "resource/Game/gameOverPanel.exml"
 	},
 	"autoGenerateExmlsList": true,
 	"exmls": [
@@ -32,6 +33,7 @@
 		"resource/eui_skins/VScrollBarSkin.exml",
 		"resource/eui_skins/VSliderSkin.exml",
 		"resource/Game/Back_Home.exml",
+		"resource/Game/gameOverPanel.exml",
 		"resource/Game/StartGame.exml"
 	],
 	"path": "resource/default.thm.json"

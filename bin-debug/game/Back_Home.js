@@ -27,7 +27,6 @@ var Back_Home = (function (_super) {
         this.init();
     };
     Back_Home.prototype.init = function () {
-        console.log(this.parent.parent.width);
         this.x = this.parent.parent.width - 100;
         this.addEventListener(egret.TouchEvent.TOUCH_TAP, this.backhome, this);
     };

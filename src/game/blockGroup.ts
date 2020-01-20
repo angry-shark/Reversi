@@ -1,6 +1,6 @@
 class blockGroup extends egret.Sprite {
 	//一排的数组
-	private static row:Array<block>=[];
+	public  _rows:Array<block>;
 	//声明单例
 /*	private static shared:blockGroup;
 	public static Shared():blockGroup{
@@ -15,18 +15,18 @@ class blockGroup extends egret.Sprite {
 	}
 	private row(){
 		//初始化行
-		blockGroup.row=[];
+		this._rows=[];
 		//创建一排
 		for(let i:number=0;i<Data.rowNumber;i++){
 			var blocks:block=new block();
-			blockGroup.row.push(blocks);
+			this._rows.push(blocks);
 			blocks.x=i*blocks.width;
 			this.addChild(blocks);
 			blocks.addEventListener(egret.TouchEvent.TOUCH_TAP,this.onclicktap,this);
 		}
 	}
 	//点击事件
-	private _curren:number=0;
+	public _curren:number=0;
 	private onclicktap(e:egret.TouchEvent){
 		e.target.onBlockClick();
 		if(e.target.blockColor==1||this._curren!=Data._row()-2){
@@ -36,18 +36,19 @@ class blockGroup extends egret.Sprite {
 		}
 	}
 	//随机黑色
+	private randomNumber:number=0;
 	public drawRow(){
-		let radomNumber =Math.ceil(Math.random()*4)-1;
 		this.clear();
-		if(radomNumber==-1){
-			radomNumber=0
+		this.randomNumber=Math.ceil(Math.random()*4)-1
+		if(this.randomNumber==-1){
+			this.randomNumber=0
 		}
-		blockGroup.row[radomNumber].blockColor=0;
+		this._rows[this.randomNumber].blockColor=0;
 	}
 	//点击清空颜色
 	public clear(){
-		for(let i :number=0;i<blockGroup.row.length;i++){
-			blockGroup.row[i].blockColor=1;
+		for(let i :number=0;i<this._rows.length;i++){
+			this._rows[i].blockColor=1;
 		}
 	}
 	public move(){
@@ -56,6 +57,6 @@ class blockGroup extends egret.Sprite {
 			this._curren=0;
 			this.drawRow();
 		}
-		this.y=this._curren*Data.get_width()
+		this.y=this._curren*Data.get_width()/4
 	}
 }
