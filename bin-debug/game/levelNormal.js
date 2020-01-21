@@ -35,7 +35,8 @@ var levelNormal = (function (_super) {
             group.addEventListener("gameOver", this.gameOver, this);
             group.addEventListener("clickRight", this.clickRight, this);
         }
-        // this.y=Data.get_height()-this.height
+        this.addChild(gameScore.Shared());
+        this.y = Data.get_height() - this.height;
     };
     //绑定相应行数和黑色各种
     levelNormal.prototype.startGame = function () {
@@ -59,19 +60,22 @@ var levelNormal = (function (_super) {
         group.addEventListener("gameOver",this.gameOver,this);
         group.addEventListener("clickRight",this.clickRight,this);
 }*/
-    //点击成功到下一行
-    levelNormal.prototype.nextRow = function () {
-        for (var i = 0; i < Data._row(); i++) {
-            this._rectGrounp[i].move();
-        }
-    };
+    //点击失败
     levelNormal.prototype.gameOver = function () {
         //禁止点击
         this.touchChildren = false;
-        this.parent.addChild(new gameOverPanel());
-        console.log('游戏结束');
+        var endgame = new gameOverPanel();
+        setTimeout(function () {
+            endgame.x = Data.get_width() / 2 - endgame.width / 2;
+            endgame.y = Data.get_height() / 2 - endgame.height / 2;
+        }, 0);
+        this.parent.addChild(endgame);
     };
+    //点击成功
     levelNormal.prototype.clickRight = function () {
+        var num = Data.Score;
+        num += 1;
+        Data.Score = num;
         for (var i = 0; i < Data._row(); i++) {
             this._rectGrounp[i].move();
         }

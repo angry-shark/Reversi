@@ -20,7 +20,7 @@ class gameOverPanel extends eui.Button implements  eui.UIComponent {
 	}
 	private back_home(){
 		this.parent.addChild(StartGame.Shared());
+		this.parent.removeChildAt(0);
 		this.parent.removeChild(this);
-		// this.parent.removeChild(new levelNormal());
 	}
 }

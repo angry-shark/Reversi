@@ -1,20 +1,35 @@
 {
-  "16fad63e2eb": {
-    "path": "game\\StartGame.ts",
-    "class": "StartGame",
-    "parentPath": ""
-  },
-  "16fb133f9d7": {
-    "path": "game\\Back_Home.ts",
-    "class": "Back_Home",
-    "parentPath": "resource/eui_skins/ButtonSkin.exml"
-  },
-  "16fc216b0bf": {
-    "path": "game\\gameOverPanel.ts",
-    "class": "gameOverPanel",
-    "parentPath": ""
-  },
-  "global": {
-    "globalAutoLayerMarkEnable": false
-  }
+    "16fad63e2eb": {
+        "path": "game\\StartGame.ts",
+        "class": "StartGame",
+        "parentPath": ""
+    },
+    "16fb133f9d7": {
+        "path": "game\\Back_Home.ts",
+        "class": "Back_Home",
+        "parentPath": "resource/eui_skins/ButtonSkin.exml"
+    },
+    "16fc216b0bf": {
+        "path": "game\\gameOverPanel.ts",
+        "class": "gameOverPanel",
+        "parentPath": ""
+    },
+    "global": {
+        "globalAutoLayerMarkEnable": false
+    },
+    "16fc6d34bbd": {
+        "path": "game\\gameScore.ts",
+        "class": "gameScore",
+        "parentPath": ""
+    },
+    "16fc7174305": {
+        "path": "game\\gameRecord.ts",
+        "class": "gameRecord",
+        "parentPath": ""
+    },
+    "16fc74125d9": {
+        "path": "game\\record.ts",
+        "class": "record",
+        "parentPath": ""
+    }
 }

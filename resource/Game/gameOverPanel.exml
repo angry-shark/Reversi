@@ -1,9 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <e:Skin class="gameOverPanelSkin" states="up,down,disabled" minHeight="50" minWidth="100" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" width="200" height="100">
-	<e:Button label="" touchEnabled="false" left="0" right="0" top="0" bottom="0"/>
-    <e:Label id="labelDisplay" top="0" bottom="0" left="0" right="0"
-             size="20"
-             textColor="0xFFFFFF" verticalAlign="middle" textAlign="center" text="游戏结束" touchEnabled="false"/>
+	<e:Button label="游戏结束" touchEnabled="true" left="0" right="0" top="0" bottom="0"/>
 
 	<w:Config id="16fc219ad1c" ></w:Config>
 </e:Skin>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="gameRecordSkin" width="640" height="1136" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" >
+	<w:Config id="16fc7174305" ></w:Config>
+	<e:Image source="selected_png" left="0" right="0" top="0" bottom="0"/>
+	<e:Scroller id="recore_Scroller" width="500" height="1000" verticalCenter="0" horizontalCenter="0" enabled="true">
+		<e:Group id="record_group">
+			<e:Image source="border_png" left="0" right="0" top="0" bottom="0"/>
+		</e:Group>
+	</e:Scroller>
+</e:Skin>

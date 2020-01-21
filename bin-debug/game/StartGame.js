@@ -28,7 +28,15 @@ var StartGame = (function (_super) {
     };
     StartGame.prototype.init = function () {
         this.btn_startgame.addEventListener(egret.TouchEvent.TOUCH_TAP, this.startGame, this);
+        this.btn_Record.addEventListener(egret.TouchEvent.TOUCH_TAP, this.gotoRecord, this);
     };
+    //进入游戏记录页面
+    StartGame.prototype.gotoRecord = function () {
+        this.parent.addChild(gameRecord.Shared());
+        console.log(Data.getNowTime() + " 得分:" + Data.Score);
+        this.parent.removeChild(this);
+    };
+    //开始游戏
     StartGame.prototype.startGame = function () {
         this.parent.addChild(new levelNormal());
         this.parent.removeChild(this);

@@ -25,4 +25,28 @@ class Data {
 	}
 	//声明每一行的个数
 	public static rowNumber:number =4;
+	//声明分数
+	private static  score:number=0
+	public static get Score():number {
+		return this.score
+	}
+	public static set Score(e:number){
+		this.score=e;
+		gameScore.Shared().setScore(e)
+	}
+	//获取当前的时间2020-1-21 17:33
+	private static nowTime:string="";
+	public static getNowTime():string{
+			let a =new Date();
+			let nowTime =a.getFullYear()+"-"+(a.getMonth()+1)+"-"+a.getDate()+" "+a.getHours()+":"+a.getMinutes();
+			return nowTime
+	}
+	//存储当前的成绩和时间
+	/*private static timeAndAchievement:string=""
+	public static get TimeAndAchievement():string{
+		return this.TimeAndAchievement
+	}
+	public static set TimeAndAchievement(e:string){
+		this.timeAndAchievement=e;
+	}*/
 }

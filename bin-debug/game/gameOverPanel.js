@@ -25,8 +25,8 @@ var gameOverPanel = (function (_super) {
     };
     gameOverPanel.prototype.back_home = function () {
         this.parent.addChild(StartGame.Shared());
+        this.parent.removeChildAt(0);
         this.parent.removeChild(this);
-        // this.parent.removeChild(new levelNormal());
     };
     return gameOverPanel;
 }(eui.Button));
